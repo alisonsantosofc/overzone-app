@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { FaGamepad } from "react-icons/fa";
 
-import Header from "../components/Header";
+import { Header } from "../components/Header";
 
 export default function Home() {
   return (
@@ -21,8 +21,9 @@ export default function Home() {
         <FaGamepad size={200}/>
         <h2 style={{
           fontSize: '3rem',
+          maxWidth: 648,
         }}>
-          Welcome to GridGame!
+          Conheça tudo sobre o mundo dos games em um só lugar!
         </h2>
       </div>
     </>

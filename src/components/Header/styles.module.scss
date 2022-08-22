@@ -5,17 +5,55 @@
 
 .headerContent {
   max-width: 80vw;
-  height: 100%;
+  height: 5rem;
   margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   nav {
+    margin-left: 5rem;
+    height: 5rem;
+
     a {
-      & + a {
-        margin-left: 1rem;
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      font-weight: 500;
+      color: var(--text-shape);
+      transition: color 0.2s;
+      overflow: hidden;
+
+      &:hover {
+        color: var(--text-color);
       }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+        background: var(--primary-color);
+        transition: transform 0.5s;
+      }
+
+      &.active::after {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  > button {
+    margin-left: auto;
+  }
+
+  div {
+    &:last-child {
+      margin-left: auto;
     }
   }
 }
@@ -25,13 +63,6 @@
   align-items: center;
 
   img {
-    width: 45px;
-    height: 45px;
-    margin-right: .5rem;
-
-    & + img {
-      width: 160px;
-      height: 60px;
-    }
+    width: 140px;
   }
 }
