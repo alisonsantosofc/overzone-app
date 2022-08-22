@@ -1,6 +1,7 @@
 import Head from "next/head";
-
 import { FaGamepad } from "react-icons/fa";
+
+import Header from "../components/Header";
 
 export default function Home() {
   return (
