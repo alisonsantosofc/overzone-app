@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 
 import { Dashboard } from "../components/Dashboard";
@@ -25,10 +25,9 @@ export default function Home({ monthlyPlanProduct }: HomeProps) {
 }
 
 // Function executed in node layer of next js
-export const getServerSideProps: GetServerSideProps = async () =>{
+export const getStaticProps: GetStaticProps = async () =>{
   const monthlyPlanPrice = await stripe.prices.retrieve('price_1LZmevKzC5kWMiSujfU9IOmN', {
-    // get full product information
-    expand: ['product'],
+    expand: ['product'], // get full product information
   });
 
   const monthlyPlanProduct = {
@@ -39,6 +38,7 @@ export const getServerSideProps: GetServerSideProps = async () =>{
   return {
     props: {
       monthlyPlanProduct,
-    }
+    },
+    revalidate: 60 * 60 * 24 * 30, // revalidate every 30 days
   }
 }

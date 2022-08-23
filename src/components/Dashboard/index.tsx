@@ -16,7 +16,7 @@ export function Dashboard({ monthlyPlanProduct }: DashboardProps) {
       <section className={styles.dashboardContent}>
         <h1>
           Conheça tudo sobre o mundo dos <span>games</span> no nosso
-          <span>website</span>!
+          <span> website</span>!
         </h1>
 
         <p>
