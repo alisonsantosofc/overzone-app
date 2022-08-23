@@ -17,6 +17,7 @@ export function Header() {
           <a href="#" className={styles.active}>Início</a>
           <a href="#" >Lançamentos</a>
           <a href="#" >Clássicos</a>
+          <a href="#">Gêneros</a>
         </nav>
 
         {isUserLoggedIn ? <UserMenu /> : <SignInButton />}

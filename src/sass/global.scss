@@ -36,6 +36,17 @@
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 1368px) {
+    max-width: 90vw;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 95vw;
+  }
 }
 
 body, input, textarea, select, button {

@@ -1,4 +1,8 @@
 .headerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 5rem;
   border-bottom: 1px solid var(--bg-shape);
 }
@@ -55,6 +59,14 @@
     &:last-child {
       margin-left: auto;
     }
+  }
+
+  @media (max-width: 1368px) {
+    max-width: 90vw;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 95vw;
   }
 }
 
