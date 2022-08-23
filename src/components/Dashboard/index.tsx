@@ -1,3 +1,5 @@
+import { Button } from '../Button';
+import { SubscribeButton } from '../SubscribeButton';
 import styles from './styles.module.scss';
 
 export function Dashboard() {
@@ -11,6 +13,11 @@ export function Dashboard() {
         <p>
           Assine o plano mensal por apenas <span> R$ 3,90</span> e tenha acesso total as funcionalidades do website.
         </p>
+
+        <SubscribeButton />
+        <Button>
+          Continuar sem plano
+        </Button>
       </section>
 
       <img src="/images/slider.png" alt="" />

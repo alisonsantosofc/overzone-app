@@ -23,11 +23,17 @@
   p {
     font-size: 1.4rem;
     width: 60%;
-    margin-top: 2rem;
+    margin: 2rem 0;
 
     span {
       font-weight: 600;
       color: var(--secondary-color);
+    }
+  }
+
+  button {
+    &:last-child {
+      margin-left: 1rem;
     }
   }
 }
