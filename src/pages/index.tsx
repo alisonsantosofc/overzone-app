@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { Dashboard } from "../components/Dashboard";
 
-import { stripe } from "../services/stripe";
+import stripe from "../services/stripe";
 
 interface HomeProps {
   monthlyPlan: {

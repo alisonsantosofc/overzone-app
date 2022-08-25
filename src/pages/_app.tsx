@@ -1,13 +1,17 @@
-import { AppProps } from "../../node_modules/next/app";
-import { Header } from "../components/Header";
+import { SessionProvider, useSession } from 'next-auth/react';
+import { AppProps } from '../../node_modules/next/app';
+
+import { Header } from '../components/Header';
 
 import '../sass/global.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
+      <SessionProvider session={pageProps.session}>
+        <Header />
+        <Component {...pageProps} />
+      </SessionProvider>
     </>
   );
 }

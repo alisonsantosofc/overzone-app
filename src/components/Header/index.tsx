@@ -1,10 +1,11 @@
+import { useSession } from 'next-auth/react';
 import { SignInButton } from '../SignInButton';
 import { UserMenu } from '../UserMenu';
 
 import styles from './styles.module.scss';
 
 export function Header() {
-  const isUserLoggedIn = false;
+  const { data: session } = useSession();
 
   return (
     <header className={styles.headerContainer}>
@@ -21,7 +22,7 @@ export function Header() {
           <a href="#">Gêneros</a>
         </nav>
 
-        {isUserLoggedIn ? <UserMenu /> : <SignInButton />}
+        {session ? <UserMenu /> : <SignInButton />}
       </div>
     </header>
   );
