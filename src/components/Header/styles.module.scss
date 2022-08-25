@@ -75,6 +75,11 @@
   align-items: center;
 
   img {
-    width: 140px;
+    width: 40px;
+    margin-right: 0.5rem;
+
+    & + img {
+      width: 140px;
+    }
   }
 }

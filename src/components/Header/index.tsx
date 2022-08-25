@@ -10,6 +10,7 @@ export function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.brandContainer}>
+          <img src="/images/icon.svg" alt="icon" />
           <img src="/images/logo-white.svg" alt="gridgame" />
         </div>
 

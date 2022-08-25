@@ -4,13 +4,13 @@ import { SubscribeButton } from "../SubscribeButton";
 import styles from "./styles.module.scss";
 
 interface DashboardProps {
-  monthlyPlanProduct: {
+  monthlyPlan: {
     priceId: string;
     amount: number;
   };
 }
 
-export function Dashboard({ monthlyPlanProduct }: DashboardProps) {
+export function Dashboard({ monthlyPlan }: DashboardProps) {
   return (
     <main className={styles.dashboardContainer}>
       <section className={styles.dashboardContent}>
@@ -25,13 +25,13 @@ export function Dashboard({ monthlyPlanProduct }: DashboardProps) {
             {` ${formatAmount({
               lang: "pt-BR",
               currency: "BRL",
-              amount: monthlyPlanProduct.amount,
+              amount: monthlyPlan.amount,
             })} `}
           </span>
           e tenha acesso total as funcionalidades do website.
         </p>
 
-        <SubscribeButton planPriceId={monthlyPlanProduct.priceId}/>
+        <SubscribeButton planPriceId={monthlyPlan.priceId}/>
         <Button>Continuar sem plano</Button>
       </section>
 

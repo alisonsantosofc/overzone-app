@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #eeb817;
+  --primary-color: #ffaf2f;
   --secondary-color: #68ceeb;
 
   --text-color: #ebebf5;
@@ -40,7 +40,7 @@ body {
   max-width: 80vw;
   margin: 0 auto;
   padding: 0 2rem;
-
+  
   @media (max-width: 1368px) {
     max-width: 90vw;
   }
