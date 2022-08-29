@@ -4,9 +4,7 @@ import { fauna } from '../../../services/fauna';
 
 export default function saveUser(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    console.log(req.body);
-
-    return res.json(req.body);
+    return res.json({});
   } else {
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method not allowed');

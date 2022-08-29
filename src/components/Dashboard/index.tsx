@@ -35,7 +35,7 @@ export function Dashboard({ monthlyPlan }: DashboardProps) {
         <Button>Continuar sem plano</Button>
       </section>
 
-      <img src="/images/slider.png" alt="" />
+      <img src="/images/slider.png" alt="slider" />
     </main>
   );
 }

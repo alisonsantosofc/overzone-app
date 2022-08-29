@@ -1,7 +1,6 @@
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import { api } from '../../services/api';
-import { Button } from '../Button';
 import { SignInButton } from '../SignInButton';
 import { UserMenu } from '../UserMenu';
 
@@ -27,7 +26,7 @@ export function Header() {
           <a href="#">Gêneros</a>
         </nav>
 
-        {session ? <UserMenu /> : <Button size="small">Entrar</Button>}
+        {session ? <UserMenu /> : <SignInButton />}
       </div>
     </header>
   );
