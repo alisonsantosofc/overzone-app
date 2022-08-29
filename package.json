@@ -1,5 +1,5 @@
 {
-  "name": "bettagame-app",
+  "name": "gamehud-app",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "faunadb": "^4.6.0",
     "next": "12.2.5",
     "next-auth": "^4.10.3",

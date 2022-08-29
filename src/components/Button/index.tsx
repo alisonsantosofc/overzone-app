@@ -1,4 +1,5 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
+
 import styles from './styles.module.scss';
 
 interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
@@ -6,12 +7,14 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   size?: 'small' | 'large';
 }
 
-export function Button({children}: ButtonProps) {
+export function Button({children, type, size}: ButtonProps) {
+  console.log(type);
+  
 
   return (
     <button 
       type="button"
-      className={styles.buttonContainer}
+      className={`${styles.buttonContainer} ${styles[type]} ${styles[size]}`}
     >
       {children}
     </button>
