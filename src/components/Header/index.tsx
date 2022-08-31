@@ -1,4 +1,5 @@
 import { useSession } from 'next-auth/react';
+import Link from 'next/link';
 import { useEffect } from 'react';
 import { api } from '../../services/api';
 import { SignInButton } from '../SignInButton';
@@ -18,12 +19,12 @@ export function Header() {
         </div>
 
         <nav>
-          <a href="#" className={styles.active}>
+          <Link href="/" className={styles.active}>
             Início
-          </a>
-          <a href="#">Lançamentos</a>
-          <a href="#">Clássicos</a>
-          <a href="#">Gêneros</a>
+          </Link>
+          <Link href="/releases">Lançamentos</Link>
+          <Link href="/classics">Clássicos</Link>
+          <Link href="/genres">Gêneros</Link>
         </nav>
 
         {session ? <UserMenu /> : <SignInButton />}

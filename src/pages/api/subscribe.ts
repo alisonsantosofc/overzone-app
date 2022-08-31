@@ -59,7 +59,7 @@ export default async function subscribeRouter(req: NextApiRequest, res: NextApiR
       ],
       mode: 'subscription',
       allow_promotion_codes: true,
-      success_url: `${process.env.NEXTAUTH_URL}/posts`,
+      success_url: `${process.env.NEXTAUTH_URL}/releases`,
       cancel_url: process.env.NEXTAUTH_URL,
     });
 
