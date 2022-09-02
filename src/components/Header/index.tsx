@@ -19,12 +19,18 @@ export function Header() {
         </div>
 
         <nav>
-          <Link href="/" className={styles.active}>
-            Início
+          <Link href="/">
+            <a className={styles.active}>Início</a>
           </Link>
-          <Link href="/releases">Lançamentos</Link>
-          <Link href="/classics">Clássicos</Link>
-          <Link href="/genres">Gêneros</Link>
+          <Link href="/releases">
+            <a>Lançamentos</a>
+          </Link>
+          <Link href="/classics">
+            <a>Clássicos</a>
+          </Link>
+          <Link href="/genres">
+            <a>Gêneros</a>
+          </Link>
         </nav>
 
         {session ? <UserMenu /> : <SignInButton />}
