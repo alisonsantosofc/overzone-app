@@ -1,0 +1,160 @@
+{
+  "id": "game",
+  "label": "Game",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        }
+      },
+      "name": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Name",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "realeaseYear": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Realease Year",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "distributor": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Distributor",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "genres": {
+        "type": "Group",
+        "config": {
+          "label": "Genres",
+          "fields": {}
+        }
+      },
+      "platforms": {
+        "type": "Group",
+        "config": {
+          "label": "Platforms",
+          "fields": {}
+        }
+      },
+      "buyLinks": {
+        "type": "Group",
+        "config": {
+          "label": "Buy Links",
+          "fields": {}
+        }
+      },
+      "images": {
+        "type": "Group",
+        "config": {
+          "label": "Images",
+          "fields": {
+            "cover": {
+              "type": "Image",
+              "config": {
+                "label": "Cover",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "slide": {
+              "type": "Image",
+              "config": {
+                "label": "Slide",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "imagePrints": {
+        "type": "Group",
+        "config": {
+          "label": "Image Prints",
+          "fields": {
+            "one": {
+              "type": "Image",
+              "config": {
+                "label": "One",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "two": {
+              "type": "Image",
+              "config": {
+                "label": "Two",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "three": {
+              "type": "Image",
+              "config": {
+                "label": "Three",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "four": {
+              "type": "Image",
+              "config": {
+                "label": "Four",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "videos": {
+        "type": "Group",
+        "config": {
+          "label": "Videos",
+          "fields": {
+            "trailer": {
+              "type": "Embed",
+              "config": {
+                "label": "Trailer",
+                "placeholder": ""
+              }
+            },
+            "gameplay": {
+              "type": "Embed",
+              "config": {
+                "label": "Gameplay",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

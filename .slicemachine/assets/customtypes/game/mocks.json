@@ -1,0 +1,144 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "game",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "name": [
+      {
+        "type": "paragraph",
+        "text": "Do est nisi dolor nisi mollit commodo aliqua cillum dolore voluptate mollit ea enim.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Laborum sunt tempor exercitation.",
+        "spans": []
+      }
+    ],
+    "realeaseYear": [
+      {
+        "type": "paragraph",
+        "text": "Nulla exercitation ipsum tempor qui commodo sunt aute enim aute cillum eu ullamco nisi irure.",
+        "spans": []
+      }
+    ],
+    "distributor": [
+      {
+        "type": "paragraph",
+        "text": "Nostrud aute nulla dolor ut velit excepteur.",
+        "spans": []
+      }
+    ],
+    "genres": [
+      {}
+    ],
+    "platforms": [
+      {}
+    ],
+    "buyLinks": [
+      {}
+    ],
+    "images": [
+      {
+        "cover": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        },
+        "slide": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
+        }
+      }
+    ],
+    "imagePrints": [
+      {
+        "one": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636"
+        },
+        "two": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+        },
+        "three": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+        },
+        "four": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+        }
+      }
+    ],
+    "videos": [
+      {
+        "trailer": {
+          "embed_url": "https://twitter.com/prismicio/status/1356293316158095361",
+          "author_name": "Prismic",
+          "author_url": "https://twitter.com/prismicio",
+          "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Gatsby is a popular choice for Prismic users and we work hard on delivering a CMS that plays to its strengths.<br><br>But, what makes <a href=\"https://twitter.com/GatsbyJS?ref_src=twsrc%5Etfw\">@GatsbyJS</a> so popular?<br><br>Here are some of <a href=\"https://twitter.com/mxstbr?ref_src=twsrc%5Etfw\">@mxstbr</a>&#39;s thoughts on Gatsby&#39;s success and how they&#39;re improving developer experience.<a href=\"https://t.co/ZjCPvsWWUD\">https://t.co/ZjCPvsWWUD</a> <a href=\"https://t.co/EQqzJpeNKl\">pic.twitter.com/EQqzJpeNKl</a></p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1356293316158095361?ref_src=twsrc%5Etfw\">February 1, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+          "width": 550,
+          "height": null,
+          "type": "rich",
+          "cache_age": "3153600000",
+          "provider_name": "Twitter",
+          "provider_url": "http://www.twitter.com/",
+          "version": "1.0"
+        },
+        "gameplay": {
+          "embed_url": "https://twitter.com/prismicio/status/1356293316158095361",
+          "author_name": "Prismic",
+          "author_url": "https://twitter.com/prismicio",
+          "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Gatsby is a popular choice for Prismic users and we work hard on delivering a CMS that plays to its strengths.<br><br>But, what makes <a href=\"https://twitter.com/GatsbyJS?ref_src=twsrc%5Etfw\">@GatsbyJS</a> so popular?<br><br>Here are some of <a href=\"https://twitter.com/mxstbr?ref_src=twsrc%5Etfw\">@mxstbr</a>&#39;s thoughts on Gatsby&#39;s success and how they&#39;re improving developer experience.<a href=\"https://t.co/ZjCPvsWWUD\">https://t.co/ZjCPvsWWUD</a> <a href=\"https://t.co/EQqzJpeNKl\">pic.twitter.com/EQqzJpeNKl</a></p>&mdash; Prismic (@prismicio) <a href=\"https://twitter.com/prismicio/status/1356293316158095361?ref_src=twsrc%5Etfw\">February 1, 2021</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+          "width": 550,
+          "height": null,
+          "type": "rich",
+          "cache_age": "3153600000",
+          "provider_name": "Twitter",
+          "provider_url": "http://www.twitter.com/",
+          "version": "1.0"
+        }
+      }
+    ]
+  }
+}
