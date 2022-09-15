@@ -11,9 +11,14 @@
 }
 
 .dashboardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
   h1 {
     font-size: 3.2rem;
     font-weight: 900;
+    text-align: right;
 
     span {
       color: var(--secondary-color);
@@ -24,6 +29,7 @@
     font-size: 1.4rem;
     width: 60%;
     margin: 2rem 0;
+    text-align: right;
 
     span {
       font-weight: 600;
@@ -31,9 +37,11 @@
     }
   }
 
-  button {
-    &:last-child {
-      margin-left: 1rem;
+  div {
+    button {
+      &:last-child {
+        margin-left: 1rem;
+      }
     }
   }
 }

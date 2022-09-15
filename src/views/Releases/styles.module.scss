@@ -1,0 +1,29 @@
+.releasesContainer {
+  margin-top: 8rem;
+}
+
+.releasesContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+
+  a {
+    display: flex;
+    flex-direction: column;
+
+    picture {
+      width: 346px;
+      height: 198px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    strong {
+      font-size: 1.2rem;
+    }
+  }
+}

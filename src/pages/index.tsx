@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
-import { Dashboard } from '../components/Dashboard';
+import { Dashboard } from '../views/Dashboard';
 import { rawg } from '../services/rawg-api';
 
 import { stripe } from '../services/stripe';
@@ -38,13 +38,6 @@ export const getStaticProps: GetStaticProps = async () => {
     priceId: stripeMonthlyPlan.id,
     amount: stripeMonthlyPlan.unit_amount / 100,
   };
-
-  const response = await rawg.get(
-    `/games?key=${process.env.RAWG_API_KEY}&dates=2019-09-01,2019-09-30&platforms=4`
-  )
-
-  const games = response.data;
-  console.log(games);
 
   return {
     props: {

@@ -1,7 +1,7 @@
-import { formatAmount } from "../../utils/formatData";
-import { Button } from "../Button";
-import { SubscribeButton } from "../SubscribeButton";
-import styles from "./styles.module.scss";
+import { formatAmount } from '../../utils/formatData';
+import { Button } from '../../components/Button';
+import { SubscribeButton } from '../../components/SubscribeButton';
+import styles from './styles.module.scss';
 
 interface DashboardProps {
   monthlyPlan: {
@@ -13,29 +13,30 @@ interface DashboardProps {
 export function Dashboard({ monthlyPlan }: DashboardProps) {
   return (
     <main className={styles.dashboardContainer}>
+      <img src="/images/slider.png" alt="slider" />
+
       <section className={styles.dashboardContent}>
         <h1>
-          Conheça tudo sobre o mundo dos <span>games</span> no nosso
-          <span> website</span>!
+          Conheça novos <span>jogos</span> e saiba <span>aonde</span> comprar com <span>facilidade</span>!
         </h1>
 
         <p>
           Assine o plano mensal por apenas
           <span>
             {` ${formatAmount({
-              lang: "pt-BR",
-              currency: "BRL",
+              lang: 'pt-BR',
+              currency: 'BRL',
               amount: monthlyPlan.amount,
             })} `}
           </span>
           e tenha acesso total as funcionalidades do website.
         </p>
 
-        <SubscribeButton planPriceId={monthlyPlan.priceId}/>
-        <Button>Continuar sem plano</Button>
+        <div>
+          <SubscribeButton planPriceId={monthlyPlan.priceId} />
+          <Button>Continuar sem plano</Button>
+        </div>
       </section>
-
-      <img src="/images/slider.png" alt="slider" />
     </main>
   );
 }

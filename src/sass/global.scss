@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #ffaf2f;
-  --secondary-color: #68ceeb;
+  --primary-color: #68ebb7;
+  --secondary-color: #7f98ff;
 
   --text-color: #ebebf5;
   --text-shape: #8c8c9d;
@@ -35,6 +35,10 @@
   html {
     font-size: 87.5%;
   }
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {

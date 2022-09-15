@@ -8,9 +8,6 @@ interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
 }
 
 export function Button({children, type, size}: ButtonProps) {
-  console.log(type);
-  
-
   return (
     <button 
       type="button"
