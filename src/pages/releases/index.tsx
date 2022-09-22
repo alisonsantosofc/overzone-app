@@ -24,7 +24,7 @@ export default function ReleasesPage({ games }: ReleasesPageProps) {
 export const getStaticProps: GetStaticProps = async () => {
 
   const response = await rawg.get(
-    `/games?key=${process.env.RAWG_API_KEY}&dates=2019-09-01,2019-09-30&platforms=4`
+    `/games?key=${process.env.RAWG_API_KEY}&platforms=1`
   );
 
   const games = response.data.results;
