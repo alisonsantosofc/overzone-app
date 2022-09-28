@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import { Dashboard } from '../views/Dashboard';
-import { rawg } from '../services/rawg-api';
 
 import { stripe } from '../services/stripe';
 
@@ -17,7 +16,7 @@ export default function Home({ monthlyPlan }: HomeProps) {
   return (
     <>
       <Head>
-        <title>Gamehud</title>
+        <title>gamezord</title>
       </Head>
 
       <Dashboard monthlyPlan={monthlyPlan} />

@@ -1,23 +1,20 @@
-import { getDate } from 'date-fns';
-import { formatToReleaseDate } from '../../utils/formatData';
+import { IGame } from '../../pages/releases';
+
 import styles from './styles.module.scss';
 
 interface ReleasesProps {
-  games: [];
+  games: IGame[];
 }
 
-export function Releases({ games }) {
-  console.log(games[0]);
-
+export function Releases({ games }: ReleasesProps) {
   return (
     <>
       <main className={styles.releasesContainer}>
         <div className={styles.releasesContent}>
-          {games.map((game) => {
-            return (
+          {games.map((game) => (
               <a href="" key={game.id} className={styles.gameItem}>
                 <picture>
-                  <img src={game.background_image} alt={game.name} />
+                  <img src={game.backgroundImage} alt={game.name} />
                 </picture>
 
                 <div className={styles.gameItemContent}>
@@ -25,13 +22,13 @@ export function Releases({ games }) {
                   <p>
                     <span>Lançamento: </span>
                     <time>
-                    {formatToReleaseDate(new Date(game.released))}
+                    {game.released}
                   </time>
                   </p>
                 </div>
               </a>
-            );
-          })}
+            )
+          )}
         </div>
       </main>
     </>

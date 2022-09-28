@@ -6,7 +6,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
 }
 
 .gameItem {
@@ -16,14 +16,28 @@
   justify-content: center;
   padding: 1rem;
   border-radius: 10px;
+  transition: background 0.2s ease-in;
 
   &:hover {
     background: var(--bg-shape);
+
+    picture {
+      width: 20.5rem;
+      height: 12.5rem;
+    }
+
+    .gameItemContent {
+      h4 {
+        max-height: 1.8rem;
+        font-size: 1.5rem;
+      }
+    }
   }
 
   picture {
     width: 21rem;
     height: 13rem;
+    transition: all 0.2s ease-in-out;
 
     img {
       width: 100%;
@@ -49,6 +63,7 @@
     font-size: 1.2rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    transition: all 0.2s ease-in-out;
   }
 
   > p {

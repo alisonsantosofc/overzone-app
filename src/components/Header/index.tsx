@@ -1,7 +1,5 @@
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { api } from '../../services/api';
 import { SignInButton } from '../SignInButton';
 import { UserMenu } from '../UserMenu';
 

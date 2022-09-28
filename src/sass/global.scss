@@ -23,6 +23,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 22px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--input-body);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--text-shape);
+    border-radius: 8px;
+    border: 6px solid var(--input-body);
+  }
 }
 
 @media (max-width: 1080px) {
@@ -58,7 +73,7 @@ body {
 }
 
 body, input, textarea, select, button {
-  font: 400 1rem "Poppins", sans-serif;
+  font: 400 1rem "Montserrat", sans-serif;
 }
 
 button {

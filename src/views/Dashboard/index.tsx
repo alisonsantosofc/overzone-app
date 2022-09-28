@@ -1,7 +1,13 @@
-import { formatAmount } from '../../utils/formatData';
-import { Button } from '../../components/Button';
-import { SubscribeButton } from '../../components/SubscribeButton';
+import {signIn, useSession} from 'next-auth/react';
+
+import {SubscribeButton} from '../../components/SubscribeButton';
+import {HyperButton} from '../../components/HyperButton';
+
+import {formatAmount} from '../../utils/formatData';
+
 import styles from './styles.module.scss';
+import Router from 'next/router';
+import { useEffect, useState } from 'react';
 
 interface DashboardProps {
   monthlyPlan: {
@@ -10,14 +16,26 @@ interface DashboardProps {
   };
 }
 
-export function Dashboard({ monthlyPlan }: DashboardProps) {
+export function Dashboard({monthlyPlan}: DashboardProps) {
+  const {data: session} = useSession();
+
+  const [withoutSubscription, setWithoutSubscription] = useState(false);
+
+  function handleWithoutSubscription() {
+    if (session) {
+      Router.push('/releases');
+    } else {
+      signIn('google');
+    }
+  }
+
   return (
     <main className={styles.dashboardContainer}>
       <img src="/images/slider.png" alt="slider" />
 
       <section className={styles.dashboardContent}>
         <h1>
-          Conheça novos <span>jogos</span> e saiba <span>aonde</span> comprar com <span>facilidade</span>!
+          Conheça novos <span>jogos</span> e saiba <span>aonde</span> comprar e fazer <span>downloads </span>!
         </h1>
 
         <p>
@@ -34,7 +52,7 @@ export function Dashboard({ monthlyPlan }: DashboardProps) {
 
         <div>
           <SubscribeButton planPriceId={monthlyPlan.priceId} />
-          <Button>Continuar sem plano</Button>
+          <HyperButton onClick={() => handleWithoutSubscription()}>Continuar sem plano</HyperButton>
         </div>
       </section>
     </main>
