@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient gradientUnits="userSpaceOnUse" x1="477.784" y1="290.786" x2="477.784" y2="439.154" id="gradient-2" gradientTransform="matrix(1, 0, 0, 1.000001, 0, 0)">
-      <stop offset="0" style="stop-color: rgba(104, 207, 235, 1)"/>
-      <stop offset="1" style="stop-color: rgb(28, 125, 209);"/>
-    </linearGradient>
-    <linearGradient gradientUnits="userSpaceOnUse" x1="118.213" y1="53.299" x2="118.213" y2="230.455" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, 0, 0)">
-      <stop offset="0" style="stop-color: rgba(104, 207, 235, 1)"/>
-      <stop offset="1" style="stop-color: rgb(28, 125, 209);"/>
-    </linearGradient>
-    <linearGradient gradientUnits="userSpaceOnUse" x1="358.762" y1="55.856" x2="358.762" y2="228.637" id="gradient-1" gradientTransform="matrix(1, 0, 0, 1, 0, 0)">
-      <stop offset="0" style="stop-color: rgba(255, 187, 0, 1)"/>
-      <stop offset="1" style="stop-color: rgb(255, 157, 0);"/>
-    </linearGradient>
-    <linearGradient gradientUnits="userSpaceOnUse" x1="358.762" y1="55.856" x2="358.762" y2="228.637" id="gradient-4" gradientTransform="matrix(1.000002, 0, 0, 1.000002, 0, 0)">
-      <stop offset="0" style="stop-color: rgba(255, 187, 0, 1)"/>
-      <stop offset="1" style="stop-color: rgb(255, 157, 0);"/>
-    </linearGradient>
-  </defs>
-  <rect x="356.63" y="290.786" width="242.307" height="148.368" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.37; fill: url(#gradient-2);" transform="matrix(0.992842, -0.119435, -0.028237, 1.010606, -115.312874, 45.906288)" rx="12.652" ry="12.652"/>
-  <rect x="26.768" y="53.299" width="182.889" height="177.156" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.37; fill: url(#gradient-0);" transform="matrix(0.985941, 0.167091, 0.010279, 1.016001, -1.470786, -9.05453)" rx="12.063" ry="12.063"/>
-  <rect x="270.385" y="55.856" width="176.754" height="172.781" style="paint-order: fill; stroke: rgb(0, 0, 0); stroke-opacity: 0.37; fill: url(#gradient-1);" rx="30.079" ry="30.079" transform="matrix(0.85615, 0.516727, -0.516727, 0.85615, 109.412521, -150.824097)"/>
-  <rect x="270.385" y="55.856" width="176.754" height="172.781" style="paint-order: fill; stroke: rgb(0, 0, 0); stroke-opacity: 0.37; fill: url(#gradient-4);" rx="30.079" ry="30.079" transform="matrix(0.999907, 0.013602, -0.013602, 0.999907, -238.652283, 217.239288)"/>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <ellipse style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(90, 120, 242);" cx="166.085" cy="133.701" rx="120" ry="120"/>
+  <path d="M 280.159 237.002 Q 447.713 -10.513 477.281 237.002 L 477.281 237.002 Q 506.849 484.517 309.727 484.517 L 309.727 484.517 Q 112.606 484.517 280.159 237.002 Z" style="stroke-width: 0px; stroke: rgb(248, 40, 71); fill: rgb(248, 40, 71);" bx:shape="triangle 112.606 -10.513 394.243 495.03 0.85 0.5 1@d60015d1"/>
+  <rect x="-70.072" y="201.379" width="59.218" height="161" rx="30" ry="30" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(248, 40, 71);" transform="matrix(0.07749, -0.996993, 0.996993, 0.07749, -171.238205, 363.114716)"/>
+  <rect x="-65.02" y="167.603" width="54.948" height="133.996" rx="30" ry="30" style="stroke: rgb(0, 0, 0); stroke-width: 0px; fill: rgb(248, 40, 71);" transform="matrix(0.258442, -0.966027, 0.966027, 0.258442, -94.076225, 241.420456)"/>
 </svg>
