@@ -1,5 +1,6 @@
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { ActiveLink } from '../ActiveLink';
 import { SignInButton } from '../SignInButton';
 import { UserMenu } from '../UserMenu';
 
@@ -18,18 +19,18 @@ export function Header() {
         </div>
 
         <nav>
-          <Link href="/">
-            <a className={styles.active}>Início</a>
-          </Link>
-          <Link href="/releases">
+          <ActiveLink href="/" prefetch activeClassName={styles.active}>
+            <a>Início</a>
+          </ActiveLink>
+          <ActiveLink href="/releases" prefetch activeClassName={styles.active}>
             <a>Lançamentos</a>
-          </Link>
-          <Link href="/classics">
+          </ActiveLink>
+          <ActiveLink href="/classics" prefetch activeClassName={styles.active}>
             <a>Clássicos</a>
-          </Link>
-          <Link href="/genres">
+          </ActiveLink>
+          <ActiveLink href="/genres" activeClassName={styles.active}>
             <a>Gêneros</a>
-          </Link>
+          </ActiveLink>
         </nav>
 
         {session ? <UserMenu /> : <SignInButton />}
