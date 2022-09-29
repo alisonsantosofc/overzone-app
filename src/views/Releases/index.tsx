@@ -12,7 +12,7 @@ export function Releases({ games }: ReleasesProps) {
   
   return (
     <>
-      <main className={styles.releasesContainer}>
+      <main className={`${styles.releasesContainer}`}>
         <div className={styles.releasesContent}>
           {games.map((game) => (
               <a href="" key={game.id} className={styles.gameItem}>

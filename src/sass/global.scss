@@ -19,6 +19,27 @@
   --red-color: #e34747;
 }
 
+*.dark-mode {
+  --primary-color: #518bff;
+  --secondary-color: #18b777;
+
+  --text-color: #2f3040;
+  --text-shape: #494a60;
+  --text-body: #5d5e7b;
+  --label-color: #3f4153;
+  --input-body: #dbdded;
+
+  --bg-color: #e3e5f6;
+  --bg-shape: #d3d5e8;
+  --contrast-color: #23242d;
+
+  --white-color: #e9f2fa;
+  --blue-color: #4da5e0;
+  --green-color: #59ae54;
+  --orange-color: #e99a39;
+  --red-color: #e34747;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +83,7 @@ body {
   max-width: 80vw;
   margin: 0 auto;
   padding: 0 2rem;
-  
+
   @media (max-width: 1368px) {
     max-width: 90vw;
   }
@@ -72,8 +93,12 @@ body {
   }
 }
 
-body, input, textarea, select, button {
-  font: 400 1rem "Montserrat", sans-serif;
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem 'Montserrat', sans-serif;
 }
 
 button {
@@ -86,7 +111,7 @@ a {
 }
 
 .toast-container {
-  font: 500 1rem "Montserrat", sans-serif;
+  font: 500 1rem 'Montserrat', sans-serif;
 
   p {
     font-size: 0.9rem;

@@ -27,7 +27,7 @@ export default function ReleasesPage({ games }: ReleasesPageProps) {
   return (
     <>
       <Head>
-        <title>gamezord - Lançamentos</title>
+        <title>Overzone - Lançamentos</title>
       </Head>
 
       {games.length ? <Releases games={games}/> : <NotFound />}
