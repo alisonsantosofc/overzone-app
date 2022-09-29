@@ -1,6 +1,22 @@
 .dashboardContainer {
-  margin-top: -2rem;
-  height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 0 15%;
+
+  @media (max-width: 1368px) {
+    padding: 0 5%;
+  }
+
+  @media (max-width: 1080px) {
+    padding: 0 2%;
+  }
+}
+
+.dashboardContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,11 +26,11 @@
   }
 }
 
-.dashboardContent {
+.textContent {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  
+
   h1 {
     font-size: 3.2rem;
     font-weight: 900;
@@ -27,7 +43,7 @@
 
   p {
     font-size: 1.4rem;
-    width: 60%;
+    width: 65%;
     margin: 2rem 0;
     text-align: right;
 

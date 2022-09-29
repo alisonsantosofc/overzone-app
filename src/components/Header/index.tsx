@@ -7,13 +7,14 @@ import styles from './styles.module.scss';
 
 export function Header() {
   const { data: session } = useSession();
+  const darkMode = false;
 
   return (
-    <header className={styles.headerContainer}>
+    <header className={`${styles.headerContainer} dark-mode`}>
       <div className={styles.headerContent}>
         <div className={styles.brandContainer}>
           <img src="/images/icon.svg" alt="icon" />
-          <img src="/images/logo-white.svg" alt="gridgame" />
+          <img src={`/images/${darkMode ? 'logo-white' : 'logo-black'}.svg`} alt="gridgame" />
         </div>
 
         <nav>

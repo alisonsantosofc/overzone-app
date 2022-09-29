@@ -27,7 +27,7 @@ export default function Home({ monthlyPlan }: HomeProps) {
 // Function executed in node layer of next js
 export const getStaticProps: GetStaticProps = async () => {
   const stripeMonthlyPlan = await stripe.prices.retrieve(
-    'price_1LZmevKzC5kWMiSujfU9IOmN',
+    'price_1LnRbAKzC5kWMiSuw4HhA0uk',
     {
       expand: ['product'], // get full product information
     }

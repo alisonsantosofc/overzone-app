@@ -1,9 +1,9 @@
-import {signIn, useSession} from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
 
-import {SubscribeButton} from '../../components/SubscribeButton';
-import {HyperButton} from '../../components/HyperButton';
+import { SubscribeButton } from '../../components/SubscribeButton';
+import { HyperButton } from '../../components/HyperButton';
 
-import {formatAmount} from '../../utils/formatData';
+import { formatAmount } from '../../utils/formatData';
 
 import styles from './styles.module.scss';
 import Router from 'next/router';
@@ -16,8 +16,8 @@ interface DashboardProps {
   };
 }
 
-export function Dashboard({monthlyPlan}: DashboardProps) {
-  const {data: session} = useSession();
+export function Dashboard({ monthlyPlan }: DashboardProps) {
+  const { data: session } = useSession();
 
   const [withoutSubscription, setWithoutSubscription] = useState(false);
 
@@ -30,29 +30,34 @@ export function Dashboard({monthlyPlan}: DashboardProps) {
   }
 
   return (
-    <main className={`${styles.dashboardContainer}`}>
-      <img src="/images/slider.png" alt="slider" />
-
+    <main className={`${styles.dashboardContainer} dark-mode`}>
       <section className={styles.dashboardContent}>
-        <h1>
-          Conheça novos <span>jogos</span> e saiba <span>aonde</span> comprar e fazer <span>downloads </span>!
-        </h1>
+        <img src="/images/slider.png" alt="slider" />
 
-        <p>
-          Assine o plano mensal por apenas
-          <span>
-            {` ${formatAmount({
-              lang: 'pt-BR',
-              currency: 'BRL',
-              amount: monthlyPlan.amount,
-            })} `}
-          </span>
-          e tenha acesso total as funcionalidades do website.
-        </p>
+        <div className={styles.textContent}>
+          <h1>
+            Conheça novos <span>jogos</span> e saiba <span>aonde</span> comprar
+            e fazer <span>downloads </span>!
+          </h1>
 
-        <div>
-          <SubscribeButton planPriceId={monthlyPlan.priceId} />
-          <HyperButton onClick={() => handleWithoutSubscription()}>Continuar sem plano</HyperButton>
+          <p>
+            Assine o plano mensal por apenas
+            <span>
+              {` ${formatAmount({
+                lang: 'pt-BR',
+                currency: 'BRL',
+                amount: monthlyPlan.amount,
+              })} `}
+            </span>
+            e tenha acesso <span>Premium</span> em todas as áreas do website<br /> sem nenhum anúncio.
+          </p>
+
+          <div>
+            <SubscribeButton planPriceId={monthlyPlan.priceId} />
+            <HyperButton onClick={() => handleWithoutSubscription()}>
+              Continuar sem plano
+            </HyperButton>
+          </div>
         </div>
       </section>
     </main>

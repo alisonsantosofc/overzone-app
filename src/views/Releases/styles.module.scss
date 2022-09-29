@@ -1,12 +1,16 @@
 .releasesContainer {
-  margin-top: 8rem;
+  width: 100%;
+  padding-top: 8rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding-left: 1%;
 }
 
 .releasesContent {
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 8rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 15%;
+  padding-bottom: 10rem;
 }
 
 .gameItem {
@@ -22,8 +26,8 @@
     background: var(--bg-shape);
 
     picture {
-      width: 20.5rem;
-      height: 12.5rem;
+      width: 390px;
+      height: 230px;
     }
 
     .gameItemContent {
@@ -35,8 +39,8 @@
   }
 
   picture {
-    width: 21rem;
-    height: 13rem;
+    width: 400px;
+    height: 240px;
     transition: all 0.2s ease-in-out;
 
     img {

@@ -4,29 +4,39 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 5rem;
+  height: 4rem;
   border-bottom: 1px solid var(--bg-shape);
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 .headerContent {
-  max-width: 80vw;
-  height: 5rem;
-  margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 15%;
+
+  @media (max-width: 1368px) {
+    padding: 0 5%;
+  }
+
+  @media (max-width: 1080px) {
+    padding: 0 2%;
+  }
 
   nav {
+    display: flex;
     margin-left: 5rem;
-    height: 5rem;
+    height: 100%;
 
     a {
-      display: inline-block;
+      display: flex;
+      align-items: center;
       position: relative;
       padding: 0 0.5rem;
-      height: 5rem;
-      line-height: 5rem;
+      height: 100%;
       font-weight: 500;
       color: var(--text-shape);
       transition: color 0.2s;
@@ -62,14 +72,6 @@
       margin-left: auto;
     }
   }
-
-  @media (max-width: 1368px) {
-    max-width: 90vw;
-  }
-
-  @media (max-width: 1080px) {
-    max-width: 95vw;
-  }
 }
 
 .brandContainer {
@@ -81,7 +83,7 @@
     margin-right: 0.5rem;
 
     & + img {
-      width: 140px;
+      width: 130px;
     }
   }
 }
