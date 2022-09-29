@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Loader } from '../../components/Loader';
 import { IGame } from '../../pages/releases';
 
 import styles from './styles.module.scss';
