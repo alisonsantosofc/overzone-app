@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Loader } from '../../components/Loader';
+import { useLoading } from '../../hooks/useLoading';
 import { IGame } from '../../pages/releases';
 
 import styles from './styles.module.scss';
@@ -9,6 +8,8 @@ interface ReleasesProps {
 }
 
 export function Releases({ games }: ReleasesProps) {
+  const {loading, handleSetLoading} = useLoading();
+  
   return (
     <>
       <main className={styles.releasesContainer}>

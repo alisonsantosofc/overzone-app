@@ -1,10 +1,10 @@
-import {MutatingDots} from 'react-loader-spinner';
+import { MutatingDots } from 'react-loader-spinner';
 import { useLoading } from '../../hooks/useLoading';
 
 import styles from './styles.module.scss';
 
 export function Loader() {
-  const {loading} = useLoading();
+  const { loading } = useLoading();
 
   return (
     <div className={`${styles.loaderContainer} ${!loading ? styles.hidden : ''}`}>
@@ -19,6 +19,7 @@ export function Loader() {
         wrapperClass=""
         visible={true}
       />
+      <h2>Só um momento...</h2>
     </div>
   );
 }

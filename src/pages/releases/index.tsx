@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Releases } from '../../views/Releases';
 import { rawg } from '../../services/rawg-api';
 import { formatToReleaseDate } from '../../utils/formatData';
+import { NotFound } from '../../components/NotFound';
 
 export interface IGame {
   id: number;
@@ -29,7 +30,7 @@ export default function ReleasesPage({ games }: ReleasesPageProps) {
         <title>gamezord - Lançamentos</title>
       </Head>
 
-      <Releases games={games}/>
+      {games.length ? <Releases games={games}/> : <NotFound />}
     </>
   );
 }
