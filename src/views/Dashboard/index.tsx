@@ -30,7 +30,7 @@ export function Dashboard({ monthlyPlan }: DashboardProps) {
   }
 
   return (
-    <main className={`${styles.dashboardContainer} dark-mode`}>
+    <main className={`${styles.dashboardContainer}`}>
       <section className={styles.dashboardContent}>
         <img src="/images/slider.png" alt="slider" />
 

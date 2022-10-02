@@ -6,7 +6,7 @@ interface ReleasesProps {
   games: IGame[];
 }
 
-export function Releases({ games }: ReleasesProps) {
+export function Classics({ games }: ReleasesProps) {
   return (
     <>
       <main className={`${styles.releasesContainer}`}>

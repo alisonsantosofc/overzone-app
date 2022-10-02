@@ -11,7 +11,7 @@ export function Header() {
   const darkMode = false;
 
   return (
-    <header className={`${styles.headerContainer} dark-mode`}>
+    <header className={`${styles.headerContainer}`}>
       <div className={styles.headerContent}>
         <div className={styles.brandContainer}>
           <img src="/images/icon.svg" alt="icon" />
@@ -19,13 +19,13 @@ export function Header() {
         </div>
 
         <nav>
-          <ActiveLink href="/" prefetch activeClassName={styles.active}>
+          <ActiveLink href="/" activeClassName={styles.active}>
             <a>Início</a>
           </ActiveLink>
-          <ActiveLink href="/releases" prefetch activeClassName={styles.active}>
+          <ActiveLink href="/releases" activeClassName={styles.active}>
             <a>Lançamentos</a>
           </ActiveLink>
-          <ActiveLink href="/classics" prefetch activeClassName={styles.active}>
+          <ActiveLink href="/classics" activeClassName={styles.active}>
             <a>Clássicos</a>
           </ActiveLink>
           <ActiveLink href="/genres" activeClassName={styles.active}>
