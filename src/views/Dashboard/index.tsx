@@ -8,6 +8,7 @@ import { formatAmount } from '../../utils/formatData';
 import styles from './styles.module.scss';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
+import { useDarkMode } from '../../hooks/useDarkMode';
 
 interface DashboardProps {
   monthlyPlan: {
@@ -18,6 +19,7 @@ interface DashboardProps {
 
 export function Dashboard({ monthlyPlan }: DashboardProps) {
   const { data: session } = useSession();
+  const { darkMode } = useDarkMode();
 
   const [withoutSubscription, setWithoutSubscription] = useState(false);
 
@@ -30,7 +32,7 @@ export function Dashboard({ monthlyPlan }: DashboardProps) {
   }
 
   return (
-    <main className={`${styles.dashboardContainer}`}>
+    <main className={`${styles.dashboardContainer} ${darkMode ? 'dark-mode' : ''}`}>
       <section className={styles.dashboardContent}>
         <img src="/images/slider.png" alt="slider" />
 

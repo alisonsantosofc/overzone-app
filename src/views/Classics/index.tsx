@@ -1,3 +1,4 @@
+import { useDarkMode } from '../../hooks/useDarkMode';
 import { IGame } from '../../pages/releases';
 
 import styles from './styles.module.scss';
@@ -7,9 +8,11 @@ interface ReleasesProps {
 }
 
 export function Classics({ games }: ReleasesProps) {
+  const { darkMode } = useDarkMode();
+
   return (
     <>
-      <main className={`${styles.releasesContainer}`}>
+      <main className={`${styles.releasesContainer} ${darkMode ? 'dark-mode' : ''}`}>
         <div className={styles.releasesContent}>
           {games.map((game) => (
             <a href="" key={game.id} className={styles.gameItem}>

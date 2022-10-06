@@ -11,6 +11,9 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.8",
     "@prismicio/client": "^6.7.0",
     "@prismicio/helpers": "^2.3.3",
     "@prismicio/react": "^2.5.0",
