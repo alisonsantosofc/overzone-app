@@ -2,22 +2,12 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
 import { Classics } from '../../views/Classics';
-import { rawg } from '../../services/rawg-api';
-import { formatToReleaseDate } from '../../utils/formatData';
 import { NotFound } from '../../components/NotFound';
 
-export interface IGame {
-  id: number;
-  name: string;
-  slug: string;
-  released: string;
-  genres: Array<Object>;
-  backgroundImage: string;
-  shortScreenshots: Array<Object>;
-  stores: Array<Object>;
-  platforms: Array<Object>;
-  color: string;
-}
+import { IGame } from '../../types/game';
+
+import { rawg } from '../../services/rawg-api';
+import { formatToReleaseDate } from '../../utils/formatData';
 
 interface ClassicsPageProps {
   games: IGame[];
@@ -30,19 +20,18 @@ export default function ClassicsPage({ games }: ClassicsPageProps) {
         <title>Overzone - Lançamentos</title>
       </Head>
 
-      {games.length ? <Classics games={games}/> : <NotFound />}
+      {games.length ? <Classics games={games} /> : <NotFound />}
     </>
   );
 }
 
 // Function executed in node layer of next js
 export const getStaticProps: GetStaticProps = async () => {
-
   const response = await rawg.get(
     `/games?key=${process.env.RAWG_API_KEY}&platforms=79`
   );
 
-  const games = response.data.results.map(game => {
+  const games = response.data.results.map((game) => {
     return {
       id: game.id,
       name: game.name,
@@ -56,7 +45,7 @@ export const getStaticProps: GetStaticProps = async () => {
       color: game.dominant_color,
     };
   });
-  
+
   return {
     props: {
       games,
@@ -64,4 +53,3 @@ export const getStaticProps: GetStaticProps = async () => {
     revalidate: 60 * 60 * 24 * 3, // revalidate every 3 days
   };
 };
-

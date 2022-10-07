@@ -7,7 +7,7 @@ export default function ReleasesPage() {
   return (
     <>
       <Head>
-        <title>gamezord - Lançamentos</title>
+        <title>Overzone - Lançamentos</title>
       </Head>
 
     </>

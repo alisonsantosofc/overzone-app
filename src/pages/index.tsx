@@ -16,7 +16,7 @@ export default function Home({ monthlyPlan }: HomeProps) {
   return (
     <>
       <Head>
-        <title>overzone</title>
+        <title>Overzone</title>
       </Head>
 
       <Dashboard monthlyPlan={monthlyPlan} />
