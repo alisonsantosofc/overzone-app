@@ -1,10 +1,16 @@
 import Link from 'next/link';
 
-import { IGame } from '../../types/game';
-
 import { useDarkMode } from '../../hooks/useDarkMode';
 
 import styles from './styles.module.scss';
+
+interface IGame {
+  id: number;
+  name: string;
+  slug: string;
+  released: string;
+  background_image: string;
+}
 
 interface ReleasesProps {
   games: IGame[];
@@ -20,7 +26,7 @@ export function Classics({ games }: ReleasesProps) {
       >
         <div className={styles.releasesContent}>
           {games.map((game) => (
-            <Link href={`/releases/${game.id}`} key={game.id}>
+            <Link href={`/classics/${game.id}`} key={game.id}>
               <a className={styles.gameItem}>
                 <picture>
                   <img src={game.background_image} alt={game.name} />

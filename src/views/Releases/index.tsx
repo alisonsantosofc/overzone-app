@@ -1,9 +1,16 @@
 import Link from 'next/link';
-import { IGame } from '../../types/game';
 
 import { useDarkMode } from '../../hooks/useDarkMode';
 
 import styles from './styles.module.scss';
+
+interface IGame {
+  id: number;
+  name: string;
+  slug: string;
+  released: string;
+  background_image: string;
+}
 
 interface ReleasesProps {
   games: IGame[];

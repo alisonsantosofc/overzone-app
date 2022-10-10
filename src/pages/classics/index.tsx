@@ -4,10 +4,16 @@ import Head from 'next/head';
 import { Classics } from '../../views/Classics';
 import { NotFound } from '../../components/NotFound';
 
-import { IGame } from '../../types/game';
-
 import { rawg } from '../../services/rawg-api';
 import { formatToReleaseDate } from '../../utils/formatData';
+
+interface IGame {
+  id: number;
+  name: string;
+  slug: string;
+  released: string;
+  background_image: string;
+}
 
 interface ClassicsPageProps {
   games: IGame[];
@@ -37,12 +43,7 @@ export const getStaticProps: GetStaticProps = async () => {
       name: game.name,
       slug: game.slug,
       released: formatToReleaseDate(new Date(game.released)),
-      genres: game.genres,
-      backgroundImage: game.background_image,
-      shortScreenshots: game.short_screenshots,
-      stores: game.stores,
-      platforms: game.platforms,
-      color: game.dominant_color,
+      background_image: game.background_image,
     };
   });
 

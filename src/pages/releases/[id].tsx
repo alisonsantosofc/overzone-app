@@ -4,13 +4,30 @@ import { getSession } from 'next-auth/react';
 
 import { Post } from '../../views/Post';
 
-import { IGamePost } from '../../types/game';
-
 import { rawg } from '../../services/rawg-api';
 import { formatToReleaseDate } from '../../utils/formatData';
 
+interface Store {
+  id: number;
+  name: string;
+  slug: string;
+  domain: string;
+}
+
+interface GamePost {
+  id: number;
+  name: string;
+  slug: string;
+  released: string;
+  genres: Array<Object>;
+  stores: Store[];
+  description: string;
+  background_image_additional: string;
+  platforms: Array<Object>;
+}
+
 interface ReleasePostProps {
-  game: IGamePost;
+  game: GamePost;
 }
 
 export default function ReleasePost({ game }: ReleasePostProps) {
@@ -50,16 +67,15 @@ export const getServerSideProps: GetServerSideProps = async ({
     });
   });
 
-  const gamePost: IGamePost = {
+  const gamePost: GamePost = {
     id: game.id,
     name: game.name,
     slug: game.slug,
-    description: game.description_raw,
     released: formatToReleaseDate(new Date(game.released)),
     genres: game.genres,
-    background_image: game.background_image,
-    background_image_additional: game.background_image_additional,
     stores,
+    description: game.description_raw,
+    background_image_additional: game.background_image_additional,
     platforms: game.platforms,
   };
 

@@ -3,15 +3,32 @@ import { SiNintendoswitch, SiEpicgames } from 'react-icons/si';
 import { RiXboxLine } from 'react-icons/ri';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
 
-import { IGamePost } from '../../types/game';
-
 import { useDarkMode } from '../../hooks/useDarkMode';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
 
+interface Store {
+  id: number;
+  name: string;
+  slug: string;
+  domain: string;
+}
+
+interface GamePost {
+  id: number;
+  name: string;
+  slug: string;
+  released: string;
+  genres: Array<Object>;
+  stores: Store[];
+  description: string;
+  background_image_additional: string;
+  platforms: Array<Object>;
+}
+
 interface PostProps {
-  game: IGamePost;
+  game: GamePost;
 }
 
 export function Post({ game }: PostProps) {
