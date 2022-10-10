@@ -5,8 +5,16 @@ export interface IGame {
   released: string;
   genres: Array<Object>;
   background_image: string;
-  stores: Array<Object>;
+  stores: Store[];
   platforms: Array<Object>;
+}
+
+interface Store {
+  id: number;
+  name: string;
+  slug: string;
+  domain: string;
+  image_background: string;
 }
 
 export interface IGamePost extends IGame {

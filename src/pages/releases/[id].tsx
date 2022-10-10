@@ -38,6 +38,18 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   const game = response.data;
 
+  const stores = [];
+
+  game.stores.map((storeData) => {
+    stores.push({
+      id: storeData.store.id,
+      name: storeData.store.name,
+      slug: storeData.store.slug,
+      domain: storeData.store.domain,
+      image_background: storeData.store.image_background,
+    });
+  });
+
   const gamePost: IGamePost = {
     id: game.id,
     name: game.name,
@@ -47,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     genres: game.genres,
     background_image: game.background_image,
     background_image_additional: game.background_image_additional,
-    stores: game.stores,
+    stores,
     platforms: game.platforms,
   };
 
