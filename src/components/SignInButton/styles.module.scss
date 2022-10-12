@@ -5,15 +5,20 @@
   height: 3rem;
   border: none;
   padding: 1rem 2rem;
-  background: var(--input-body);
+  background: none;
   color: var(--text-color);
-  transition: filter 0.2s;
-
-  border-top-left-radius: 2.5rem;
-  border-bottom-right-radius: 2.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  overflow: hidden;
 
   &:hover {
-    filter: brightness(1.2);
+    span {
+      &::after {
+        bottom: -0.2rem;
+        right: -120%;
+        animation: normal 0.5s lineAnimation;
+      }
+    }
   }
 
   svg {
@@ -22,6 +27,34 @@
 
     &:first-child {
       margin-right: 1rem;
+    }
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: var(--text-color);
+      position: absolute;
+      bottom: -0.2rem;
+      right: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+  @keyframes lineAnimation {
+    from {
+      bottom: -0.2rem;
+      right: 0;
+    }
+  
+    to {
+      bottom: -0.2rem;
+      right: -120%;
     }
   }
 }

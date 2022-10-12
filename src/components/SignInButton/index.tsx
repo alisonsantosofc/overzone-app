@@ -5,13 +5,13 @@ import styles from './styles.module.scss';
 
 export function SignInButton() {
   return (
-    <button 
+    <button
       type="button"
       className={styles.signInButton}
       onClick={() => signIn('google')}
     >
       <FaGoogle />
-      Conectar com Google
+      <span>Conectar com Google</span>
     </button>
   );
 }

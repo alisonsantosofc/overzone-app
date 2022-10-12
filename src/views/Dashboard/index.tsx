@@ -1,7 +1,7 @@
 import { signIn, useSession } from 'next-auth/react';
 
 import { SubscribeButton } from '../../components/SubscribeButton';
-import { HyperButton } from '../../components/HyperButton';
+import { Button } from '../../components/Button';
 
 import { formatAmount } from '../../utils/formatData';
 
@@ -9,6 +9,7 @@ import styles from './styles.module.scss';
 import Router from 'next/router';
 import { useEffect, useState } from 'react';
 import { useDarkMode } from '../../hooks/useDarkMode';
+
 
 interface DashboardProps {
   monthlyPlan: {
@@ -56,9 +57,9 @@ export function Dashboard({ monthlyPlan }: DashboardProps) {
 
           <div>
             <SubscribeButton planPriceId={monthlyPlan.priceId} />
-            <HyperButton onClick={() => handleWithoutSubscription()}>
+            <Button onClick={() => handleWithoutSubscription()}>
               Continuar sem plano
-            </HyperButton>
+            </Button>
           </div>
         </div>
       </section>
