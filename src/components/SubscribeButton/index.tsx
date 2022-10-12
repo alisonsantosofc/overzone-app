@@ -4,6 +4,7 @@ import { getStripeJs } from '../../services/stripe-js';
 import { toast } from 'react-toastify';
 
 import styles from './styles.module.scss';
+import { useRouter } from 'next/router';
 
 interface SubscribeButtonProps {
   planPriceId: string;
@@ -11,10 +12,16 @@ interface SubscribeButtonProps {
 
 export function SubscribeButton({ planPriceId }: SubscribeButtonProps) {
   const { data: session } = useSession();
+  const router = useRouter();
 
   async function handleSubscribe() {
     if (!session) {
       signIn('google');
+      return;
+    }
+
+    if (session.activeSubscription) {
+      router.push('/releases');
       return;
     }
 

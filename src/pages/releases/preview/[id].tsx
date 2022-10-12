@@ -1,20 +1,17 @@
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { getSession } from 'next-auth/react';
 
-import { Post } from '../../views/Post';
+import { PostPreview } from '../../../views/PostPreview';
 
-import { rawg } from '../../services/rawg-api';
-import { formatToReleaseDate } from '../../utils/formatData';
+import { rawg } from '../../../services/rawg-api';
+import { formatToReleaseDate } from '../../../utils/formatData';
 
-interface StoreData {
+interface Store {
   id: number;
-  store: {
-    id: number;
-    name: string;
-    slug: string;
-    domain: string;
-  };
+  name: string;
+  slug: string;
+  domain: string;
 }
 
 interface GamePost {
@@ -22,11 +19,11 @@ interface GamePost {
   name: string;
   slug: string;
   released: string;
-  genres: Object[];
-  stores: StoreData[];
+  genres: Array<Object>;
+  stores: Store[];
   description: string;
   background_image_additional: string;
-  platforms: Object[];
+  platforms: Array<Object>;
 }
 
 interface ReleasePostProps {
@@ -40,34 +37,31 @@ export default function ReleasePost({ game }: ReleasePostProps) {
         <title>Overzone - Lançamentos</title>
       </Head>
 
-      <Post game={game} />
+      <PostPreview game={game} />
     </>
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  req,
-  params,
-}) => {
-  const session = await getSession({ req });
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params;
 
-  console.log(session);
-
-  if (!session.activeSubscription) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      }
-    }
-  }
-  
   const response = await rawg.get(
     `/games/${id}?key=${process.env.RAWG_API_KEY}`
   );
 
   const game = response.data;
+
+  const stores = [];
+
+  game.stores.map((storeData) => {
+    stores.push({
+      id: storeData.store.id,
+      name: storeData.store.name,
+      slug: storeData.store.slug,
+      domain: storeData.store.domain,
+      image_background: storeData.store.image_background,
+    });
+  });
 
   const gamePost: GamePost = {
     id: game.id,
@@ -75,7 +69,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     slug: game.slug,
     released: formatToReleaseDate(new Date(game.released)),
     genres: game.genres,
-    stores: game.stores,
+    stores,
     description: game.description_raw,
     background_image_additional: game.background_image_additional,
     platforms: game.platforms,

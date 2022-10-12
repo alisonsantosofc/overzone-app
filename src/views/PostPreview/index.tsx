@@ -1,10 +1,4 @@
-import {
-  FaPlaystation,
-  FaXbox,
-  FaSteam,
-  FaGamepad,
-  FaApple,
-} from 'react-icons/fa';
+import { FaPlaystation, FaXbox, FaSteam, FaGamepad, FaApple } from 'react-icons/fa';
 import { SiNintendoswitch, SiEpicgames } from 'react-icons/si';
 import { RiXboxLine } from 'react-icons/ri';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
@@ -14,14 +8,11 @@ import { useDarkMode } from '../../hooks/useDarkMode';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 
-interface StoreData {
+interface Store {
   id: number;
-  store: {
-    id: number;
-    name: string;
-    slug: string;
-    domain: string;
-  };
+  name: string;
+  slug: string;
+  domain: string;
 }
 
 interface GamePost {
@@ -29,18 +20,18 @@ interface GamePost {
   name: string;
   slug: string;
   released: string;
-  genres: Object[];
-  stores: StoreData[];
+  genres: Array<Object>;
+  stores: Store[];
   description: string;
   background_image_additional: string;
-  platforms: Object[];
+  platforms: Array<Object>;
 }
 
-interface PostProps {
+interface PostPreviewProps {
   game: GamePost;
 }
 
-export function Post({ game }: PostProps) {
+export function PostPreview({ game }: PostPreviewProps) {
   const { darkMode } = useDarkMode();
 
   function getStoreIcon(slug: string) {
@@ -106,21 +97,16 @@ export function Post({ game }: PostProps) {
               alt={game.name}
               width={920}
               height={480}
-              className={styles.postImage}
               priority
             />
 
             <div className={styles.storeLinks}>
               <h2>Disponível nas lojas</h2>
               <nav>
-                {game.stores.map((storeData) => (
-                  <a
-                    target="blank"
-                    href={`${getStoreBuyUrl(storeData.store.slug)}${game.name}`}
-                    key={storeData.store.id}
-                  >
-                    {getStoreIcon(storeData.store.slug)}
-                    <span>{storeData.store.name}</span>
+                {game.stores.map((store) => (
+                  <a target='blank' href={`${getStoreBuyUrl(store.slug)}${game.name}`} key={store.id}>
+                    {getStoreIcon(store.slug)}
+                    <span>{store.name}</span>
                   </a>
                 ))}
               </nav>

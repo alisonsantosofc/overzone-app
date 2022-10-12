@@ -4,7 +4,6 @@
   background: var(--bg-color);
   color: var(--text-color);
   padding-left: 1%;
-  padding-bottom: 2rem;
 }
 
 .postContent {
@@ -23,8 +22,6 @@
     p {
       margin-bottom: 2rem;
       line-height: 1.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 8px solid var(--primary-color);
     }
   }
 
@@ -51,21 +48,10 @@
       margin: 0.5rem 0;
       padding: 1rem;
       background: var(--bg-shape);
-      font-weight: 500;
-      transition: all 0.2s;
 
       svg {
         font-size: 2.2rem;
         margin-right: 1rem;
-        transition: all 0.2s;
-      }
-
-      &:hover {
-        filter: brightness(1.07);
-
-        svg {
-          color: var(--primary-color);
-        }
       }
     }
   }
