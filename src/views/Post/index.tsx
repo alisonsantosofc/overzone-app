@@ -4,6 +4,7 @@ import {
   FaSteam,
   FaGamepad,
   FaApple,
+  FaRegSadTear,
 } from 'react-icons/fa';
 import { SiNintendoswitch, SiEpicgames } from 'react-icons/si';
 import { RiXboxLine } from 'react-icons/ri';
@@ -13,6 +14,7 @@ import { useDarkMode } from '../../hooks/useDarkMode';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 
 interface StoreData {
   id: number;
@@ -42,6 +44,7 @@ interface PostProps {
 
 export function Post({ game }: PostProps) {
   const { darkMode } = useDarkMode();
+  const { data: session } = useSession();
 
   function getStoreIcon(slug: string) {
     switch (slug) {
@@ -99,6 +102,19 @@ export function Post({ game }: PostProps) {
             <h2>{game.name}</h2>
             <p>{game.description}</p>
           </section>
+
+          {!session?.activeSubscription ? (
+            <div className={styles.subscriptionContainer}>
+              <FaRegSadTear />
+              <p>
+                Você não tem nenhuma assinatura ativa, assine agora e tenha
+                acesso á todos os serviços do nosso website, e o melhor sem
+                anúncios!
+              </p>
+            </div>
+          ) : (
+            ''
+          )}
 
           <div>
             <Image

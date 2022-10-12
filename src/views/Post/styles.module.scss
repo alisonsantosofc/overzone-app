@@ -70,3 +70,32 @@
     }
   }
 }
+
+.subscriptionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  svg {
+    font-size: 6rem;
+    margin-right: 2rem;
+    color: var(--primary-color);
+  }
+
+  p {
+    max-width: 45%;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    > span {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
+
+  > button {
+    margin-left: 3rem;
+  }
+}
