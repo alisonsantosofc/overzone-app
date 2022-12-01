@@ -51,6 +51,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       games,
     },
-    revalidate: 60 * 60 * 24 * 3, // revalidate every 3 days
+    revalidate: 60 * 60 * 24 * 30, // revalidate every 30 days
   };
 };

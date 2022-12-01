@@ -11,7 +11,9 @@
   --bg-color: #ebedfa;
   --bg-shape: #d3d5e8;
   --contrast-color: #e9eaf4;
+  --invert-contrast-color: #181818;
 
+  --black-color: #181818;
   --white-color: #e9f2fa;
   --blue-color: #4da5e0;
   --green-color: #59ae54;
@@ -32,7 +34,9 @@
   --bg-color: #1b1c28;
   --bg-shape: #2f3040;
   --contrast-color: #23242d;
+  --invert-contrast-color: #e9eaf4;
 
+  --black-color: #080808;
   --white-color: #e9f2fa;
   --blue-color: #4da5e0;
   --green-color: #59ae54;
@@ -44,21 +48,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  &::-webkit-scrollbar {
-    width: 22px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #d5d7ea;
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #5e5f74;
-    border-radius: 8px;
-    border: 6px solid #d5d7ea;
-  }
 }
 
 @media (max-width: 1080px) {

@@ -1,11 +1,4 @@
-import {
-  FaPlaystation,
-  FaXbox,
-  FaSteam,
-  FaGamepad,
-  FaApple,
-  FaRegSadTear,
-} from 'react-icons/fa';
+import { FaPlaystation, FaXbox, FaSteam, FaGamepad, FaApple, FaRegSadTear } from 'react-icons/fa';
 import { SiNintendoswitch, SiEpicgames } from 'react-icons/si';
 import { RiXboxLine } from 'react-icons/ri';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
@@ -94,9 +87,7 @@ export function Post({ game }: PostProps) {
 
   return (
     <>
-      <main
-        className={`${styles.postContainer} ${darkMode ? 'dark-mode' : ''}`}
-      >
+      <main className={`${styles.postContainer} ${darkMode ? 'dark-mode' : ''}`}>
         <div className={styles.postContent}>
           <section>
             <h2>{game.name}</h2>
@@ -107,9 +98,8 @@ export function Post({ game }: PostProps) {
             <div className={styles.subscriptionContainer}>
               <FaRegSadTear />
               <p>
-                Você não tem nenhuma assinatura ativa, assine agora e tenha
-                acesso á todos os serviços do nosso website, e o melhor sem
-                anúncios!
+                Você não tem nenhuma assinatura ativa, assine agora e tenha acesso á todos os
+                serviços do nosso website, e o melhor sem anúncios!
               </p>
             </div>
           ) : (
@@ -118,12 +108,12 @@ export function Post({ game }: PostProps) {
 
           <div>
             <Image
+              priority
               src={game.background_image_additional}
               alt={game.name}
               width={920}
               height={480}
               className={styles.postImage}
-              priority
             />
 
             <div className={styles.storeLinks}>

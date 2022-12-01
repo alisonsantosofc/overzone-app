@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { cloneElement, ReactElement } from 'react';
 
 interface ActiveLinkProps extends LinkProps {
-  children: ReactElement;
+  children?: string;
   activeClassName: string;
 }
 
@@ -15,10 +15,8 @@ export function ActiveLink({ children, activeClassName, ...props }: ActiveLinkPr
     : '';
 
   return (
-    <Link {...props}>
-      {cloneElement(children, {
-        className,
-      })}
+    <Link className={className} {...props}>
+      {children}
     </Link>
   );
 }

@@ -45,25 +45,10 @@ export default function ReleasePost({ game }: ReleasePostProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  req,
-  params,
-}) => {
+export const getServerSideProps: GetServerSideProps = async ({ req, params }) => {
   const { id } = params;
 
-  // const session = await getSession({ req });
-  // if (!session?.activeSubscription) {
-  //   return {
-  //     redirect: {
-  //       destination: '/',
-  //       permanent: false,
-  //     }
-  //   }
-  // }
-  
-  const response = await rawg.get(
-    `/games/${id}?key=${process.env.RAWG_API_KEY}`
-  );
+  const response = await rawg.get(`/games/${id}?key=${process.env.RAWG_API_KEY}`);
 
   const game = response.data;
 

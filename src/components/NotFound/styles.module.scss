@@ -1,22 +1,11 @@
-.loaderContainer {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-color);
-}
-
 .notFoundContent {
   display: flex;
+  justify-content: center;
   padding-top: 20%;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
 
   > div {
     h1 {
@@ -46,7 +35,7 @@
       &:last-child {
         font-size: 20rem;
         margin-left: 2rem;
-        
+        color: var(--primary-color);
       }
     }
   }

@@ -7,9 +7,9 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--contrast-color);
-  transition: filter 0.2s;
+  transition: background 0.2s;
   
   &:hover {
-    filter: brightness(1.1);
+    background: var(--invert-contrast-color);
   }
 }

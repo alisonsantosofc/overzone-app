@@ -35,16 +35,13 @@ export function Header() {
 
         <nav>
           <ActiveLink href="/" activeClassName={styles.active}>
-            <a>Início</a>
+            Início
           </ActiveLink>
           <ActiveLink href="/releases" activeClassName={styles.active}>
-            <a>Lançamentos</a>
+            Lançamentos
           </ActiveLink>
           <ActiveLink href="/classics" activeClassName={styles.active}>
-            <a>Clássicos</a>
-          </ActiveLink>
-          <ActiveLink href="/genres" activeClassName={styles.active}>
-            <a>Gêneros</a>
+            Clássicos
           </ActiveLink>
         </nav>
 

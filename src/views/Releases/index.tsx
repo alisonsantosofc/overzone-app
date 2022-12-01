@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { useDarkMode } from '../../hooks/useDarkMode';
@@ -21,29 +22,27 @@ export function Releases({ games }: ReleasesProps) {
 
   return (
     <>
-      <main
-        className={`${styles.releasesContainer} ${darkMode ? 'dark-mode' : ''}`}
-      >
+      <main className={`${styles.releasesContainer} ${darkMode ? 'dark-mode' : ''}`}>
         <div className={styles.releasesContent}>
           {games.map((game) => (
-            <Link href={`/releases/${game.id}`} key={game.id}>
-              <a className={styles.gameItem}>
-                <picture>
-                  <img
-                    src={game.background_image}
-                    alt={game.name}
-                    loading="lazy"
-                  />
-                </picture>
+            <Link href={`/releases/${game.id}`} key={game.id} className={styles.gameItem}>
+              <picture>
+                <Image
+                  priority
+                  width={400}
+                  height={240}
+                  src={game.background_image}
+                  alt={game.name}
+                />
+              </picture>
 
-                <div className={styles.gameItemContent}>
-                  <h4>{game.name}</h4>
-                  <p>
-                    <span>Lançamento: </span>
-                    <time>{game.released}</time>
-                  </p>
-                </div>
-              </a>
+              <div className={styles.gameItemContent}>
+                <h4>{game.name}</h4>
+                <p>
+                  <span>Lançamento: </span>
+                  <time>{game.released}</time>
+                </p>
+              </div>
             </Link>
           ))}
         </div>

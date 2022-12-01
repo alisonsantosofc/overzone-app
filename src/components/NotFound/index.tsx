@@ -1,22 +1,25 @@
 import { FaServer, FaRegSadTear } from 'react-icons/fa';
+import { useDarkMode } from '../../hooks/useDarkMode';
 
 import styles from './styles.module.scss';
 
 export function NotFound() {
-  return (
-    <section className={styles.notFoundContainer}>
-      <div className={styles.notFoundContent}>
-        <div>
-          <h1>404</h1>
-          <h2>Ops! Alguma coisa está faltando...</h2>
-          <p>Deve ter sido nossos servidores, fica tranquilo já estamos trabalhando para resolver isso.</p>
-        </div>
+  const { darkMode } = useDarkMode();
 
-        <picture>
-          <FaServer />
-          <FaRegSadTear />
-        </picture>
+  return (
+    <div className={`${styles.notFoundContent} ${darkMode ? 'dark-mode' : ''}`}>
+      <div>
+        <h1>404</h1>
+        <h2>Ops! Alguma coisa está faltando...</h2>
+        <p>
+          Deve ter sido nossos servidores, fica tranquilo já estamos trabalhando para resolver isso.
+        </p>
       </div>
-    </section>
+
+      <picture>
+        <FaServer />
+        <FaRegSadTear />
+      </picture>
+    </div>
   );
 }
